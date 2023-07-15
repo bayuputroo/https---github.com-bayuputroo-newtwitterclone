@@ -50,6 +50,7 @@ class AuthAPI implements IAuthAPI {
       return left(
         Failure(e.message ?? 'Some unexpected error occured', stackTrace),
       );
+      
     } catch (e, stackTrace) {
       return left(
         Failure(e.toString(), stackTrace),
