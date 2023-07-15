@@ -4,7 +4,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../common/common.dart';
 import '../widgets/auth_field.dart';
 import '../../../constants/constants.dart';
-import '../../../theme/theme.dart';
 import '../controller/auth_controller.dart';
 import 'signup_view.dart';
 
@@ -93,4 +92,5 @@ class _LoginViewState extends ConsumerState<LoginView> {
             ),
     );
   }
+
 }
