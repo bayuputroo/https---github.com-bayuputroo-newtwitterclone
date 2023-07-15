@@ -40,6 +40,7 @@ class _SignUpViewState extends ConsumerState<SignUpView> {
   }
 
   @override
+   ...
   Widget build(BuildContext context) {
     final isLoading = ref.watch(authControllerProvider);
     return Scaffold(
@@ -47,6 +48,7 @@ class _SignUpViewState extends ConsumerState<SignUpView> {
       body: isLoading
           ? const Loader()
           : Center(
+          ...
               child: SingleChildScrollView(
                 child: Padding(
                   padding: const EdgeInsets.all(20.0),
