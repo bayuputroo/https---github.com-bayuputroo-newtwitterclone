@@ -10,7 +10,8 @@ final appwriteClientProvider = Provider((ref) {
   //.setSelfSigned(true); //if appwrite installed in localhost
 });
 
-final appwriteAccountProvider = Provider((ref) {
+
+final appwriteDatabaseProvider = Provider((ref) {
   final client = ref.watch(appwriteClientProvider);
-  return Account(client);
+  return Databases(client);
 });

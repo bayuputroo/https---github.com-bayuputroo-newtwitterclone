@@ -3,13 +3,12 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:twitter_clone/apis/auth_api.dart';
 import 'package:twitter_clone/core/core.dart';
 import 'package:twitter_clone/features/home/view/home_view.dart';
-
-final authControllerProvider =
-    StateNotifierProvider<AuthController, import 'package:flutter/material.dart';
+import '/apis/user_api.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:twitter_clone/apis/auth_api.dart';
 import 'package:twitter_clone/core/core.dart';
-
+final authControllerProvider =
+    StateNotifierProvider<AuthController, import 'package:flutter/material.dart';
 final authControllerProvider =
     StateNotifierProvider<AuthController, bool>((ref) {
   return AuthController(
@@ -34,7 +33,7 @@ class AuthController extends StateNotifier<bool> {
       email: email,
       password: password,
     );
-    
+
     res.fold(
       (l) => showSnackbar(context, l.message),
       (r) => print(r.email),
