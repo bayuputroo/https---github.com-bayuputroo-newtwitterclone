@@ -2,8 +2,9 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../common/common.dart';
-import '../widgets/auth_field.dart';
+import 'package:twitter_clone/features/auth/widgets/auth_field.dart';
 import '../../../constants/constants.dart';
+import '../../../theme/theme.dart';
 import '../controller/auth_controller.dart';
 import 'signup_view.dart';
 
@@ -67,7 +68,6 @@ class _LoginViewState extends ConsumerState<LoginView> {
                         text: TextSpan(
                           text: "Don't have an account?",
                           style: const TextStyle(
-                            color: Color.fromARGB(255, 246, 247, 248),
                             fontSize: 16,
                           ),
                           children: [
@@ -92,5 +92,4 @@ class _LoginViewState extends ConsumerState<LoginView> {
             ),
     );
   }
-
 }

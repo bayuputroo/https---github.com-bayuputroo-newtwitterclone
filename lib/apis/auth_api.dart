@@ -24,6 +24,8 @@ abstract class IAuthAPI {
     required String password,
   });
 
+ 
+  
   FutureEither<model.Session> login({
     required String email,
     required String password,
