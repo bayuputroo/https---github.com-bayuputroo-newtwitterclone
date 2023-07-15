@@ -5,10 +5,18 @@ import 'package:fpdart/fpdart.dart';
 
 import '../core/core.dart';
 
+...
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+...
+
 final authAPIProvider = Provider((ref) {
   final account = ref.watch(appwriteAccountProvider);
   return AuthAPI(account: account);
 });
+
+abstract class IAuthAPI {
+...
+
 
 abstract class IAuthAPI {
   FutureEither<model.Account> signUp({
